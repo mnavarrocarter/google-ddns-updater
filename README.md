@@ -8,7 +8,7 @@ deployed as a docker image.
 To use it just pull the image and configure it with environment variables:
 
 ```bash
-docker run -d --name=google-ddns-my.dynamic.host --restart=unless-stopped -e GOOGLE_DDNS_HOSTNAME=my.dynamic.host -e GOOGLE_DDNS_USERNAME=my-ddns-username  -e GOOGLE_DDNS_PASSWORD=my-ddns-password 
+docker run -d --name=google-ddns-my.dynamic.host --restart=unless-stopped -e GOOGLE_DDNS_HOSTNAME=my.dynamic.host -e GOOGLE_DDNS_USERNAME=my-ddns-username  -e GOOGLE_DDNS_PASSWORD=my-ddns-password ghcr.io/mnavarrocarter/google-ddns-updater:0.1.0
 ```
 
 Support for multiple domains via a web interface could be a feature added in future
