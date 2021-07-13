@@ -1,0 +1,32 @@
+{
+    "name": "mnavarrocarter/google-ddns-update",
+    "description": "A small application to update Dynamic DNS Records from Google Domains",
+    "minimum-stability": "stable",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matias Navarro Carter",
+            "email": "mnavarrocarter@gmail.com"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "amphp/amp": "^2.5",
+        "amphp/http-client": "^4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "MNC\\GoogDDNSUpdate\\": "src"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}

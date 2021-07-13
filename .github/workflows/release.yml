@@ -1,0 +1,22 @@
+name: Process New Code
+
+on:
+  release:
+    types:
+      - created
+jobs:
+
+  create-docker-image:
+    name: Create Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build and Push to Github Packages
+        uses: docker/build-push-action@v2
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: mnavarrocarter/google-ddns-updater/updater
+          tag_with_ref: true
