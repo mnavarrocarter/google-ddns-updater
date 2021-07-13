@@ -1,9 +1,13 @@
 name: Process New Code
 
 on:
+  push:
+    branches:
+    - main
   release:
     types:
-      - created
+    - created
+
 jobs:
 
   create-docker-image:
