@@ -20,5 +20,5 @@ Amp\Loop::repeat($env->getInterval() * 1000, static function () use ($google) {
 });
 
 Amp\Loop::run(static function () use ($logger) {
-    $logger->log('Daemon has started');
+    $logger->log('Daemon has started at '. date(DATE_ATOM));
 });
